@@ -1,5 +1,5 @@
 export interface TabType {
-  id: string,
+  id: number,
   title: string,
-  content: string,
+  Content: () => JSX.Element,
 }

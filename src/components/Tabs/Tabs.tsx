@@ -10,12 +10,14 @@ interface Props {
 }
 
 export const Tabs: FC<Props> = ({ tabs, selectedTab, onChange }) => {
+  const { id, Content } = selectedTab;
+
   return (
     <div data-cy="TabsComponent">
       <div className="tabs is-boxed">
         <ul>
           {tabs.map((tab) => {
-            const isActive = tab.id === selectedTab.id;
+            const isActive = tab.id === id;
 
             return (
               <li
@@ -33,7 +35,7 @@ export const Tabs: FC<Props> = ({ tabs, selectedTab, onChange }) => {
       </div>
 
       <div className="block" data-cy="TabContent">
-        {selectedTab.content}
+        <Content />
       </div>
     </div>
   );
