@@ -1,4 +1,7 @@
-export const TABS = [
-  { id: 'task-1', title: 'Task 1', content: 'Some text 1' },
-  { id: 'task-2', title: 'Task 2', content: 'Some text 2' },
+import { TaskOne } from '../Task1/TaskOne';
+import { TabType } from '../../types/TabType';
+
+export const TABS: TabType[] = [
+  { id: 1, title: 'Task 1', Content: TaskOne },
+  { id: 2, title: 'Task 2', Content: TaskOne },
 ];
