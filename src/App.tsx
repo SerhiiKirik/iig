@@ -3,8 +3,8 @@ import 'bulma/css/bulma.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import './App.scss';
 import { Tabs } from './components/Tabs';
-import { TabType } from './types/TabType';
 import { TABS as tabs } from './components/mockData/mockData.typedefs';
+import { TabType } from './types/typedefs';
 
 export const App: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);

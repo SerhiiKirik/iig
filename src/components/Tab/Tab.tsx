@@ -1,5 +1,5 @@
 import { FC, memo } from 'react';
-import { TabType } from '../../types/TabType';
+import { TabType } from '../../types/typedefs';
 
 interface Props {
   tab: TabType;

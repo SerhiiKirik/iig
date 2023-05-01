@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { FC, useMemo } from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -7,11 +7,14 @@ import TableHead from '@mui/material/TableHead';
 import Paper from '@mui/material/Paper';
 import TableRow from '@mui/material/TableRow';
 import { Row } from './Row/TableRow';
-import transactions from '../../../task2.json';
-import { TransitionHistory } from '../../../types/typedefs';
+import { Transition, TransitionHistory } from '../../../types/typedefs';
 
-export const TransactionList = () => {
-  const { data } = transactions;
+interface Props {
+  transitions: Transition[];
+}
+
+export const TransactionList: FC<Props> = (props) => {
+  const { transitions } = props;
 
   const preparedData = useMemo(() => {
     const newObject: Record<string, {
@@ -19,7 +22,7 @@ export const TransactionList = () => {
       history: TransitionHistory[]
     }> = {};
 
-    data.forEach((obj) => {
+    transitions.forEach((obj) => {
       const key = obj.currency;
 
       if (!newObject[key]) {

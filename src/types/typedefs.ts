@@ -16,3 +16,9 @@ export interface Transition {
   currency: string;
   history: TransitionHistory[];
 }
+
+export enum CurrenciesEnum {
+  USDT = 'USDT',
+  BTC = 'BTC',
+  ETH = 'ETH',
+}
