@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import cn from 'classnames';
-import { TabType } from '../../types/TabType';
 import { Tab } from '../Tab/Tab';
+import { TabType } from '../../types/typedefs';
 
 interface Props {
   tabs: TabType[];
